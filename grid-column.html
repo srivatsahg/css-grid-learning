@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid Column Sample</title>
+        <style>
+            body{
+                color: azure;
+                font-family: monospace;
+                text-align: center;
+            }
+            #content{
+                display: grid;
+                
+                /*  grid-template-columns: 30% 20% 50%; */
+                /*  grid-template-columns: 1fr 2fr 1fr; */
+                grid-template-columns: repeat(5, 1fr);  
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            
+            #content div{
+                background: #3BBCED;
+                padding: 30px;
+            }
+            
+            #content div:nth-child(even){
+                background: #777;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </body>
+</html>
+    
