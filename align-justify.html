@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid Column Sample</title>
+        <style>
+            body{
+                color: azure;
+                font-family: monospace;
+                text-align: center;
+            }
+            #content{
+                display: grid;
+                
+                grid-template-columns: repeat(3, 1fr);  
+                grid-auto-rows: minmax(150px,auto);
+                grid-gap: 10px;
+                max-width: 900px;
+                margin: 0 auto;
+                /*
+                align is to top and bottom
+                */
+                /*
+                align-items: stretch;
+                */
+                
+                /*
+                justify is for left and right
+                */
+                /*
+                justify-items:start;
+                */
+            }   
+            
+            #content div{
+                background: #3BBCED;
+                padding: 30px;
+            }
+            
+            #content div:nth-child(even){
+                background: #777;
+            }
+            
+            .one {
+                justify-self: start;
+            }
+            
+            .two {
+                justify-self: center;
+                align-self: center;
+            }
+            
+            .three {
+                justify-self: end;
+                align-self: end;
+            }
+            
+            .four {
+                justify-self: end;
+                align-self: start;
+            }
+            
+            .five {
+                justify-self: end;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div class="one">jus:start</div>
+            <div class="two">a:j:center</div>
+            <div class="three">a:j:end</div>
+            <div class="four">4</div>
+            <div class="five">justify end</div>
+            <div class="six">6</div>
+        </div>
+    </body>
+</html>
+    
